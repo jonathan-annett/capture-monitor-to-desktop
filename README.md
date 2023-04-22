@@ -11,5 +11,7 @@ AutoHotKey script
 use to capture current display contents to wallpaper 
 
 ctrl-shift-F1 captures display 1
+
 ctrl-shift-F2 captures display 2 
+
 and so on
