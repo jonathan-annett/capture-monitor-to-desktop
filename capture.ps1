@@ -38,7 +38,11 @@ function CaptureDesktop($path) {
   }
 }
 
-$last_filename = Get-Content $pwd\wallpaper-name.txt
+if (Test-Path  $pwd\wallpaper-name.txt) {
+      $last_filename = Get-Content $pwd\wallpaper-name.txt
+} else {
+      $last_filename =  "$pwd\nosuch.bmp"
+}
 
 $filename = "$pwd\wallpaper-display-" + $display.toString() + "-" + [System.IO.Path]::GetRandomFileName() + ".bmp"
 
