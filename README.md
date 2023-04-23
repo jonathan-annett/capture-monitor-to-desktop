@@ -43,6 +43,7 @@ Another reason you might do this is so you can exit PowerPoint in the middle of 
 
 This allows the operator to open another file, or do something else without disturbing what's being displayed on the projection screen.
 
-Operation Note:
+Operational Note
+---
 
 It's expected that the operator understand which monitor is being used for the extended display, and which is the primary display. whilst it could be assumed that 1 is the primary and 2 is the extended, this is not always the case, so it is stongly suggested the operator have done a "test run" in advance to know which display to capture, to avoid the unfortunate scenario where the desktop is set to display a presenter view screen, or some other application that happens to be open on the display being captured.
