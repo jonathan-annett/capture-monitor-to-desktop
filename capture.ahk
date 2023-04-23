@@ -26,7 +26,8 @@ SetWallpaperFile(filename) {
 ; ctrl-shift-f4 captures display 4 to wallpaper
 ^+F4:: CaptureDisplay(4)
 
-; ctrl-shift-f11 downloads a random wallpaper
+; ctrl-shift-f11 sets the default wallpaper file
+; either edit this script to point to another file, or replace default.png with your own file.
 ^+F11:: SetWallpaperFile(".\default.png")
 
 ; ctrl-shift-f12 downloads a random wallpaper
