@@ -33,9 +33,9 @@ ctrl-shift-F12 sets the wallpaper to a random picture from [Lorem Picsum](https:
       
 But Why?
 ---
-The relatively niche application of this script is for audio visual operators who wish to change the desktop of their computer to reflect a "holding slide" from a currently running powerpoint presentation.
+The relatively niche application of this script is for audio visual operators who wish to change the desktop of their computer to reflect a "holding slide" from a currently running PowerPoint presentation.
 
-Typically the operator would do this at the start of a session involving multiple presentations, choosing a slide that might be appropriate to use as a "holding slide".
+Typically an operator would do this at the start of a session involving multiple presentations, choosing a slide that might be appropriate to use as a "holding slide".
 
 Since it's not always known ahead of time what that slide should be, this mechanism allows the operator to nominate that slide "on the fly" without interupting a running presentation.
 
