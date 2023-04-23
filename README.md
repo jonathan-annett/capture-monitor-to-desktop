@@ -22,9 +22,9 @@ ctrl-shift-F11 sets the wallpaper to "default.png"
 <img src="./default.png" width="384" height="216">
 
    - you can either update the default.png to your liking
-   - or edit the script to specify an existing file)
+   - or edit the script to specify an existing file
 
-   
+
 ctrl-shift-F12 sets the wallpaper to a random picture from [Lorem Picsum](https://picsum.photos/) 
 
    - needs internet
