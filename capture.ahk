@@ -6,7 +6,7 @@ CaptureDisplay(displayNum) {
 
 RandomDownload() {
     Download "https://picsum.photos/1920/1080?random", ".\downloaded.jpg"
-    Run "powershell.exe -NoExit -ExecutionPolicy bypass -File setwallpaper.ps1 -filename .\downloaded.jpg", , "Hide"
+    Run "powershell.exe -ExecutionPolicy bypass -File setwallpaper.ps1 -filename .\downloaded.jpg", , "Hide"
 }
 
 
