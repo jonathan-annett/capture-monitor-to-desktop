@@ -70,7 +70,7 @@ To build the project, first change the Target Selection dropdown from "Debug" to
 
 This simply tells Visual Studio to make the file as efficient as possible, and not include extra code that would allow you to debug it using Visual Studio.
 
-To actually build the file use the menu in visual studio to select "Rebuild Solutuion" from the "Build" menu:
+To actually build the file use the menu in visual studio to select "Rebuild Solution" from the "Build" menu:
 
 <img src="vsmenu.png">
 
