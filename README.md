@@ -54,12 +54,16 @@ to do this you'll need [Microsoft's Visual Studio](https://visualstudio.microsof
 
 next you'll need to download the github project either by downloading the zipfile directly from [github](https://github.com/philhansen/WallpaperChanger/archive/refs/heads/master.zip) using your browser, or you may prefer to clone the repository using whatever tools you are familiar with, from `https://github.com/philhansen/WallpaperChanger.git`
 
-once you have extracted the files onto your hard drive (or clone the repo), you can go ahead and double click on the `WallpaperChanger.sln` file, to open it in Visual Studio.
+Once you have extracted the files onto your hard drive (or have cloned the repo), you can go ahead and double click on the `WallpaperChanger.sln` file, to open it in Visual Studio.
 
 If you are prompted to install additional tools, you'll need to do this before continuing, it's usually just a matter of clicking an "install" button.
 
-finally, to build the project, first change the Target Selection dropdown from "Debug" to "Release" as shown below
+To build the project, first change the Target Selection dropdown from "Debug" to "Release" as shown below
 
 <img src="vsdropdown.png">
 
+This simply tells Visual Studio to make the file as efficient as possible, and not include extra code that would allow you to debug it using Visual Studio.
 
+To actually build the file use the menu in visual studio to select "Rebuild Solutuion" from the "Build" menu:
+
+<img src="vsmenu.png">
