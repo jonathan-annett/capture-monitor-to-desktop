@@ -2,15 +2,35 @@
 # powershell script to capture a specific display to a file, and then 
 # set the desktop background of all monitors to display that file 
 # 
-# requires WallpaperChanger.exe (from https://github.com/philhansen/WallpaperChanger)
-#
-# (you can build WallpaperChanger.exe using visual studio)
-
 param([Int32]$display = 2) 
 
 [Reflection.Assembly]::LoadWithPartialName("System.Drawing")
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+
+add-type  @' 
+using System.Runtime.InteropServices; 
+namespace Win32{ 
+    
+     public class Wallpaper{ 
+        [DllImport("user32.dll", CharSet=CharSet.Auto)] 
+         static extern int SystemParametersInfo (int uAction , int uParam , string lpvParam , int fuWinIni) ; 
+         
+         public static void SetWallpaper(string thePath){ 
+            SystemParametersInfo(20,0,thePath,3); 
+         }
+    }
+ } 
+'@
+
+function SetWallpaper ($filename) {
+  $resolved = resolve-path $filename -errorAction silentlyContinue -errorVariable err
+  
+  if ($resolved) {
+      [Win32.Wallpaper]::SetWallpaper("$resolved")
+  }
+}
+
 
 function CaptureDesktop($path) {
 
@@ -48,7 +68,7 @@ $filename = "$pwd\wallpaper-display-" + $display.toString() + "-" + [System.IO.P
 
 CaptureDesktop  $filename 
 
-.\WallpaperChanger.exe  $filename 0
+SetWallpaper $filename
 
 Set-Content -Path  $pwd\wallpaper-name.txt -Value  $filename
 
