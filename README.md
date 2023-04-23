@@ -35,10 +35,10 @@ But Why?
 ---
 The relatively niche application of this script is for audio visual operators who wish to change the desktop of their computer to reflect a "holding slide" from a currently running powerpoint presentation.
 
-Typically the operator would do this at the start of a session involving multiple presentations, choosing a slide that might be appropriate to use a as a "holding slide".
+Typically the operator would do this at the start of a session involving multiple presentations, choosing a slide that might be appropriate to use as a "holding slide".
 
 Since it's not always known ahead of time what that slide should be, this mechanism allows the operator to nominate that slide "on the fly" without interupting a running presentation.
 
-Another reason you might do this is so you can exit powerpoint completely, leaving the extended desktop showing the current slide.
+Another reason you might do this is so you can exit PowerPoint in the middle of a presentation, leaving the extended desktop showing the current slide.
 
 This allows the operator to open another file, or do something else without disturbing what's being displayed on the projection screen.
