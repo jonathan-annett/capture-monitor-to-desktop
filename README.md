@@ -4,7 +4,9 @@ This is a [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/ov
 
 It requires *WallpaperChanger.exe* (from https://github.com/philhansen/WallpaperChanger)
 
-`WallpaperChanger.exe` is included in this repo, but you might prefer to build it yourself, indeed, depending on you windows security settings, you may need to do that before you can run the `WallpaperChanger.exe` file, or [tell windows to allow it to run](https://github.com/jonathan-annett/capture-monitor-to-desktop/blob/main/README.md#asking-windows-security-to-bless-a-downloaded-file) (or you might elect to do both - compile it yourself, and then tell windows to allow it to run)
+`WallpaperChanger.exe` is included in this repo, but you might prefer to [build it yourself](https://github.com/jonathan-annett/capture-monitor-to-desktop/blob/main/README.md#asking-windows-security-to-bless-a-downloaded-file), or [tell windows to allow it to run](https://github.com/jonathan-annett/capture-monitor-to-desktop/blob/main/README.md#asking-windows-security-to-bless-a-downloaded-file)
+
+You might elect to do both - [build it yourself](https://github.com/jonathan-annett/capture-monitor-to-desktop/blob/main/README.md#asking-windows-security-to-bless-a-downloaded-file), and then tell windows to [allow it to run](https://github.com/jonathan-annett/capture-monitor-to-desktop/blob/main/README.md#asking-windows-security-to-bless-a-downloaded-file)
 
 
 AutoHotKey script
