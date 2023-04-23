@@ -2,6 +2,16 @@
 
 This is a [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.3) script to capture the contents a windows display monitor directly to the desktop wallpaper.
 
+Arguments
+===
+the script expects the arguments "-display n" where n is the display number
+
+Examples
+===
+  - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -display 1` will capture display 1
+  - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -display 2` will capture display 2
+
+
 AutoHotKey script
 ===
 
