@@ -56,4 +56,10 @@ next you'll need to download the github project either by downloading the zipfil
 
 once you have extracted the files onto your hard drive (or clone the repo), you can go ahead and double click on the `WallpaperChanger.sln` file, to open it in Visual Studio.
 
+If you are prompted to install additional tools, you'll need to do this before continuing, it's usually just a matter of clicking an "install" button.
+
+finally, to build the project, first change the Target Selection dropdown from "Debug" to "Release" as shown below
+
+<img src="vsdropdown.png">
+
 
