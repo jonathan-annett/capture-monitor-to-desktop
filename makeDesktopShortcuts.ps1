@@ -16,7 +16,7 @@ Function createShortcut($displayNum, $hotkey, $Name, $usefile) {
     $Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
     $Shortcut.TargetPath = "PowerShell.exe"
     $Shortcut.WorkingDirectory = $WorkingDirectory
-    if ($usefile -ne "") {
+    if ($usefile -ne $null) {
         $Shortcut.Arguments = "-ExecutionPolicy bypass -file .\capture.ps1 -usefile $usefile"
     } else {
         $Shortcut.Arguments = "-ExecutionPolicy bypass -file .\capture.ps1 -display $displayNum"
