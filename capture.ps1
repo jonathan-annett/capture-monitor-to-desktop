@@ -2,7 +2,7 @@
 # powershell script to capture a specific display to a file, and then 
 # set the desktop background of all monitors to display that file 
 # 
-param([Int32]$display = 2) 
+param([Int32]$display = 2, [String]$usefile = "") 
 
 [Reflection.Assembly]::LoadWithPartialName("System.Drawing")
 [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
@@ -58,10 +58,39 @@ function CaptureDesktop($path) {
   }
 }
 
+
+function RandomWallpaper() {
+  Invoke-WebRequest -Uri "https://picsum.photos/1920/1080?random" -OutFile ".\downloaded.jpg"
+  SetWallpaper ".\downloaded.jpg"
+}
+
 if (Test-Path  $pwd\wallpaper-name.txt) {
       $last_filename = Get-Content $pwd\wallpaper-name.txt
 } else {
       $last_filename =  "$pwd\nosuch.bmp"
+}
+
+if ($usefile -eq "random") {
+  RandomWallpaper
+  
+  if (Test-Path $last_filename) {
+    remove-item $last_filename
+  }
+
+  exit
+} 
+if ($usefile -ne "") {
+  if (Test-Path $usefile) {
+    SetWallpaper $usefile
+    
+    if (Test-Path $last_filename) {
+      remove-item $last_filename
+    }
+
+  } else {
+    write-host "File $usefile does not exist"
+  }
+  exit
 }
 
 $filename = "$pwd\wallpaper-display-" + $display.toString() + "-" + [System.IO.Path]::GetRandomFileName() + ".bmp"
