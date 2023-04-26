@@ -12,6 +12,7 @@ Examples
   - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -display 2` will capture display 2
 
 Windows Shortcuts With Hotkeys
+===
 
 How you invoke the powershell script is up to you, but for your convenience`makeDesktopShortcuts.cmd` will create desktop shortcuts with hotkeys to catpure each monitor, without the need to install a hotkey manager like AutoHotKey
 
