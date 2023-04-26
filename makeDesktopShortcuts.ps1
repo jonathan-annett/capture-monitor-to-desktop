@@ -3,11 +3,11 @@ $WorkingDirectory =  [System.IO.Path]::GetDirectoryName( $MyInvocation.MyCommand
 Function createShortcut($displayNum, $hotkey, $Name, $usefile) {
     $DesktopDir = [Environment]::GetFolderPath("Desktop")
    
-    if ($Name -eq $null) {
+    if ($null -eq $Name) {
         $Name = "Capture Display $displayNum"
     }
 
-    if ($hotkey -eq $null) {
+    if ($null -eq $hotkey) {
         $hotkey = "CTRL+SHIFT+F$displayNum"
     }
     $ShortcutFile = $DesktopDir + "\" + $Name + ".lnk"
@@ -16,7 +16,7 @@ Function createShortcut($displayNum, $hotkey, $Name, $usefile) {
     $Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
     $Shortcut.TargetPath = "PowerShell.exe"
     $Shortcut.WorkingDirectory = $WorkingDirectory
-    if ($usefile -ne $null) {
+    if ($null -ne $usefile) {
         $Shortcut.Arguments = "-ExecutionPolicy bypass -file .\capture.ps1 -usefile $usefile"
     } else {
         $Shortcut.Arguments = "-ExecutionPolicy bypass -file .\capture.ps1 -display $displayNum"
@@ -27,7 +27,7 @@ Function createShortcut($displayNum, $hotkey, $Name, $usefile) {
 
 }
 
-$monitorCount = (GWMI win32_videocontroller | select caption, Current*Resolution | Where-Object -Property "CurrentHorizontalResolution" -GT 0).count
+$monitorCount = (Get-WmiObject win32_videocontroller | Select-Object caption, Current*Resolution | Where-Object -Property "CurrentHorizontalResolution" -GT 0).count
 
 switch ($monitorCount) {
     0 { write-host "No monitors detected"}
