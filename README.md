@@ -8,8 +8,18 @@ the script expects the arguments "-display n" where n is the display number
 
 Examples
 ===
+  - `.\capture.cmd 1` will capture display 1
+  - `.\capture.cmd 2` will capture display 2
+  - `.\capture.cmd 0 random` will set a random wallpaper
+  - `.\capture.cmd 0 D:\mywallpaper.bmp` will set an existing file
+  
+ 
+Examples (Direct invocation of powershell script)
+===
   - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -display 1` will capture display 1
   - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -display 2` will capture display 2
+  - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -usefile random` will set a random wallpaper
+  - `powershell.exe -ExecutionPolicy bypass -File capture.ps1 -usefile D:\mywallpaper.bmp` will set an existing file
 
 Windows Shortcuts With Hotkeys
 ===
