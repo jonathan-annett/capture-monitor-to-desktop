@@ -24,7 +24,7 @@ Examples (Direct invocation of powershell script)
 Windows Shortcuts With Hotkeys
 ===
 
-How you invoke the powershell script is up to you, but for your convenience, `makeDesktopShortcuts.cmd` will create desktop shortcuts with hotkeys to capture each monitor, without the need to install a hotkey manager like AutoHotKey. See the next section about AutoHotKey for a list of the keys used. (`makeDesktopShortcuts.cmd` defines shortcuts using the same keys)
+How you invoke the powershell script is up to you, but for your convenience, `makeDesktopShortcuts.cmd` will create desktop shortcuts with hotkeys to capture each monitor, without the need to install a hotkey manager like AutoHotKey. See the next section about AutoHotKey for a list of the keys used. (`makeDesktopShortcuts.cmd` defines shortcuts using the same keys )
 
 note - before running `makeDesktopShortcuts.cmd`, enable all your monitors, as the script will detect how many you have and make a shortcut for each one.
 
